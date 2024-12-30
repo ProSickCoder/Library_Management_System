@@ -55,3 +55,13 @@ To run the Library Management System:
 ## Conclusion
 
 The Library Management System is a comprehensive solution for managing library operations, providing a user-friendly interface and robust functionality for both users and administrators. It serves as a practical example of object-oriented programming in C++ and can be further extended with additional features as needed.
+
+## New changes in the future
+
+1. Unit tests
+2. Logging system
+3. Configuration file for settings
+4. Database integration instead of file storage
+5. Transaction management for critical operations
+6. User session management
+7. Book reservation system
