@@ -492,14 +492,14 @@ public:
         }
     }
 
-    Book* findBook(const std::string& isbn) {
-        for (auto& book : books) {
-            if (book.getIsbn() == isbn) {
-                return &book;
-            }
-        }
-        return nullptr;
+    std::optional<std::reference_wrapper<Book>> findBook(const std::string& isbn) {
+    auto it = std::find_if(books.begin(), books.end(),
+        [&isbn](const Book& book) { return book.getIsbn() == isbn; });
+    if (it != books.end()) {
+        return std::ref(*it);
     }
+    return std::nullopt;
+}
 };
 
 int main() {
